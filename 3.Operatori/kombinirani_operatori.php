@@ -10,9 +10,9 @@
     echo $a .= $b; // Ekvivalent $a = $a . $b
 
 
-    $ime = 'Aleksandar';
+    $ime = 'Robert';
     $razmak = '<br>';
-    $prezime = 'Dobrinic';
+    $prezime = 'Hlobik';
 
     $ime .= $razmak; // -> 'Aleksandar '
     $ime .= $prezime;// -> 'Aleksandar Dobrinic'
