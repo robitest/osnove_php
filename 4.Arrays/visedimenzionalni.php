@@ -25,3 +25,25 @@ print_r($fruits2);
 echo '</pre>';
 
 echo $fruits2['banana']['cijena'];
+
+$users = [
+    [
+        'name' => 'Robi',
+        'age' => '35',
+        'gender' => 'male',
+    ]
+];
+
+echo '<br>';
+echo '<pre>';
+var_dump($users);
+echo '</pre>';
+
+foreach ($users as $key => $user) {
+            unset($users[$key]['age']);
+}
+
+echo '<br>';
+echo '<pre>';
+var_dump($users);
+echo '</pre>';
