@@ -6,7 +6,7 @@
 //  1. Proizvoljno deklarirajte funkciju koja vraća neki tekst.
 function printText()
 {
-    echo 'Ova funkcija vraca text.';
+    return 'Ova funkcija vraca text.'; 
 }
 
 //  2. Pozovite funkciju i vraćenu vrijednost dodijelite varijabli.
