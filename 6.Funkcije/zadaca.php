@@ -62,12 +62,3 @@ for ($i=0; $i <5; $i++) {
     echo 'Sum of next random number ' . $printRandomNumber(rand(1, 10));
     _Br(1);
 }
-// Definiranje funkcije za skok u novi red <br>
-function _Br($number = 1) : ?string
-{
-    for ($i=0; $i < $number; $i++) { 
-        echo '<br>';
-    }
-    
-    return null;
-}
