@@ -2,15 +2,20 @@
 
 const USERS_CSV = __DIR__ . '/podaci/users.csv';
 
-if(($handle = fopen(USERS_CSV, 'r')) !== false){ 
+if( false !== $handle = fopen(USERS_CSV, 'r') ) {
+
+    $headers = fgetcsv($handle);
     $data = [];
-    // var_dump(fgetcsv($handle));
-    while(($row = fgetcsv($handle)) !== false){
-        $data[] = $row;
+
+    while( false !== $row = fgetcsv($handle)) {
+        $data[] = array_combine($headers, $row);
     }
 
-    var_dump($data);
+    fclose($handle);
 
-}else{
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+} else {
     echo 'Unable to open the file.';
 }
